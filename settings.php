@@ -55,21 +55,6 @@ class AstrometrySettings {
 			<script>
 				jQuery(document).ready(function($){
 
-					//Load color picker
-					jQuery('.color-picker').iris({
-						defaultColor: true,
-						mode: 'hsl',
-    controls: {
-        horiz: 's', // horizontal defaults to saturation
-        vert: 'l', // vertical defaults to lightness
-        strip: 'h' // right strip defaults to hue
-    },
-						change: function(event, ui){},
-						clear: function() {},
-						hide: true,
-						palettes: true
-					});
-
 					//Set fields for additional catalogues disabled/enables
 					jQuery('.additionalCatalogues').prop("disabled", !jQuery('#additionalCatalogues').is(':checked'))
 					jQuery('#additionalCatalogues').change(function() {
@@ -258,7 +243,7 @@ class AstrometrySettings {
 
 	public function ngc_color_callback() {
 		printf(
-			'<input class="color-picker" type="text" data-default-color="#cc0000" name="astrometry_settings[color_ngc]" id="color_ngc" value="%s">',
+			'<input class="color-picker" type="color" data-default-color="#cc0000" name="astrometry_settings[color_ngc]" id="color_ngc" value="%s">',
 			isset( $this->astrometry_settings_options['color_ngc'] ) ? esc_attr( $this->astrometry_settings_options['color_ngc']) : '#cc0000'
         );
         echo "<br>" . __('Color for NGC catalogue annotation','astrometry');
@@ -266,7 +251,7 @@ class AstrometrySettings {
 
 	public function ic_color_callback() {
 		printf(
-			'<input class="color-picker" type="text" data-default-color="#6699ff" name="astrometry_settings[color_ic]" id="color_ic" value="%s">',
+			'<input class="color-picker" type="color" data-default-color="#6699ff" name="astrometry_settings[color_ic]" id="color_ic" value="%s">',
 			isset( $this->astrometry_settings_options['color_ic'] ) ? esc_attr( $this->astrometry_settings_options['color_ic']) : '#6699ff'
         );
         echo "<br>" . __('Color for IC catalogue annotation','astrometry');
@@ -274,7 +259,7 @@ class AstrometrySettings {
 
 	public function bright_color_callback() {
 		printf(
-			'<input class="color-picker" type="text" data-default-color="#CCC" name="astrometry_settings[color_bright]" id="color_bright" value="%s">',
+			'<input class="color-picker" type="color" data-default-color="#CCC" name="astrometry_settings[color_bright]" id="color_bright" value="%s">',
 			isset( $this->astrometry_settings_options['color_bright'] ) ? esc_attr( $this->astrometry_settings_options['color_bright']) : '#CCC'
         );
         echo "<br>" . __('Color for bright stars (named stars) annotation','astrometry');
@@ -282,7 +267,7 @@ class AstrometrySettings {
 
 	public function hd_color_callback() {
 		printf(
-			'<input class="color-picker" type="text" data-default-color="#CCC" name="astrometry_settings[color_hd]" id="color_hd" value="%s">',
+			'<input class="color-picker" type="color" data-default-color="#CCC" name="astrometry_settings[color_hd]" id="color_hd" value="%s">',
 			isset( $this->astrometry_settings_options['color_hd'] ) ? esc_attr( $this->astrometry_settings_options['color_hd']) : '#CCC'
         );
         echo "<br>" . __('Color for HD annotation','astrometry');
@@ -306,7 +291,7 @@ class AstrometrySettings {
 
 	public function messier_color_callback() {
 		printf(
-			'<input class="color-picker additionalCatalogues" type="text" data-default-color="#CCC" name="astrometry_settings[color_messier]" id="color_messier" value="%s">',
+			'<input class="color-picker additionalCatalogues" type="color" data-default-color="#CCC" name="astrometry_settings[color_messier]" id="color_messier" value="%s">',
 			isset( $this->astrometry_settings_options['color_messier'] ) ? esc_attr( $this->astrometry_settings_options['color_messier']) : '#CCC'
         );
         echo "<br>" . __('Color for Messier annotation','astrometry');
@@ -322,7 +307,7 @@ class AstrometrySettings {
 
 	public function celestialCoordinateGrid_color_callback() {
 		printf(
-			'<input class="color-picker" type="text" data-default-color="#CCC" name="astrometry_settings[color_celestialCoordinateGrid]" id="color_celestialCoordinateGrid" value="%s">',
+			'<input class="color-picker" type="color" data-default-color="#CCC" name="astrometry_settings[color_celestialCoordinateGrid]" id="color_celestialCoordinateGrid" value="%s">',
 			isset( $this->astrometry_settings_options['color_celestialCoordinateGrid'] ) ? esc_attr( $this->astrometry_settings_options['color_celestialCoordinateGrid']) : '#CCC'
         );
         echo "<br>" . __('Color for celestial coordinate grid','astrometry');

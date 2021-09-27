@@ -101,12 +101,5 @@ if ( is_admin() ) {
     //Localisation
     load_plugin_textdomain( 'astrometry', false, dirname(plugin_basename(__FILE__)) . '/languages' );
 }
-function addSettingsAssets() {
-    if ( is_admin() ) {
-        wp_enqueue_style( 'wp-color-picker' );
-        wp_enqueue_script( 'iris', admin_url( 'js/iris.min.js' ), array( 'jquery-ui-draggable', 'jquery-ui-slider', 'jquery-touch-punch' ), false, 1 );
-    }
-}
-add_action( 'admin_enqueue_scripts', 'addSettingsAssets');
 
 ?>
