@@ -135,6 +135,26 @@ class AstrometryData
 		return $tags;
 	}
 
+	public function GetSkyplotUrl($zoom)
+	{
+		$calibrationId = $this->Get("submission")['job_calibrations'][0][1];
+		$filename = pathinfo(wp_get_attachment_image_src( $this->mediaId, 'full', false )[0])['filename'];
+
+		//Saving Skyplot Zoom 1
+		$skyplot1File = wp_upload_dir()['path'] . "/" . $filename . "-skyplot1.png";
+		if (!file_exists($skyplot1File)) {			
+			file_put_contents($skyplot1File, fopen("https://nova.astrometry.net/sky_plot/zoom1/" . $calibrationId, 'r'));
+		}
+
+		//Saving Skyplot Zoom 2
+		$skyplot2File = wp_upload_dir()['path'] . "/" . $filename . "-skyplot2.png";
+		if (!file_exists($skyplot2File)) {			
+			file_put_contents($skyplot2File, fopen("https://nova.astrometry.net/sky_plot/zoom2/" . $calibrationId, 'r'));
+		}
+
+	  	return wp_upload_dir()['url'] . "/" . $filename . "-skyplot".$zoom.".png";	
+	}
+
 	private function Curl($url, $content)
 	{
 		$curl = curl_init($url);

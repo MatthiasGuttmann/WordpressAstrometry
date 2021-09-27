@@ -93,12 +93,12 @@ jQuery(document).ready(function($) {
 		//Zoomable Skyplot
 		astroImg.parent().find(".skyplot img").on('click', function() {
 			var src = $(this).attr('src');
-			if(src.indexOf('zoom2') > 0) {
-				$(this).attr('src', src.replace("zoom2", "zoom1"))
+			if(src.indexOf('skyplot2') > 0) {
+				$(this).attr('src', src.replace("skyplot2", "skyplot1"))
 				return;
 			}
-			if(src.indexOf('zoom1') > 0) {
-				$(this).attr('src', src.replace("zoom1", "zoom2"))
+			if(src.indexOf('skyplot1') > 0) {
+				$(this).attr('src', src.replace("skyplot1", "skyplot2"))
 				return;
 			}
 		});

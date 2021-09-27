@@ -82,7 +82,7 @@ function astrometry_render($attributes, $content) {
         if ( current_user_can('administrator') ) { $add .= '<a href="javascript:void(0);" class="refreshAstrometry refreshInfo" title="' . __('Reload object tags', 'astrometry') . '"></a>'; }
         $add .= __('Objects', 'astrometry') . '</label><p class="objects">' . join($data->GetTagLinks(),", ") . '</p>';
 
-        $content = str_replace("{SKYPLOT}", "<img src='//nova.astrometry.net/sky_plot/zoom1/" . $submission["job_calibrations"][0][1] . "'>", $content);
+        $content = str_replace("{SKYPLOT}", "<img src='" . $data->GetSkyplotUrl(1) . "'>", $content);
     }
     else
     {        
