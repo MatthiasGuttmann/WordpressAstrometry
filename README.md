@@ -14,13 +14,13 @@ Welcome to my first Wordpress Plugin. It is an Plugin, that provides a Gutenberg
 - Default localisation is english, a german localisation is also included
 
 # How it looks
-![look](https://github.com/RedburnM/WordpressAstrometry/raw/master/assets/example1.png)
-![look](https://github.com/RedburnM/WordpressAstrometry/raw/master/assets/example2.png)
+![look](https://github.com/MattChique/WordpressAstrometry/raw/master/assets/example1.png)
+![look](https://github.com/MattChique/WordpressAstrometry/raw/master/assets/example2.png)
 
-Or checkout [my demo](https://www.explorespace.de/2020/m45/)
+Or checkout [my demo](https://www.cloudgap.de/2021/ngc1893/)
 
 # What you need
 All you need is an API key. Get it here: http://nova.astrometry.net. After install, go to the plugins settings and fill it in the API key data field.
 
 # Installation
-Just download the [ZIP file](https://github.com/RedburnM/WordpressAstrometry/archive/master.zip) and upload it with your Wordpress plugin upload interface.
+Just download the [ZIP file](https://github.com/MattChique/WordpressAstrometry/archive/master.zip) and upload it with your Wordpress plugin upload interface.
