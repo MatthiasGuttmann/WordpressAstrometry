@@ -3,7 +3,7 @@ Welcome to my first Wordpress Plugin. It is an Plugin, that provides a Gutenberg
 
 # What it does
 - Solving astronomic images via [astrometry.NET](http://nova.astrometry.net)
-- Colored annotations by different catalogues (HD, Bright, NGC, IC, the ones, which are delivered by astrometry.NET)
+- Colored annotations by different catalogues (HD, Bright, NGC, IC, the ones, which are delivered by astrometry.net)
 - Globally turn on Messier Objects to override NGC
 - Global settings administration page: Decide wether to show the celestial grid or not. Choose colors of catalogues and grid
 - All annotations are stylable via custom CSS as they are SVG objects
