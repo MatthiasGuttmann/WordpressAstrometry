@@ -1,4 +1,4 @@
-# Wordpress Astrometry.NET Plugin
+# Wordpress Astrometry.net Plugin
 Welcome to my first Wordpress Plugin. It is an Plugin, that provides a Gutenberg block, which uses astrometry.net for solving an astronomical image.
 
 # What it does
